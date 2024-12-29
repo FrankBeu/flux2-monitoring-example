@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/FrankBeu/flux2-monitoring-example
+  url: ssh://git@github.com/frankbeu/flux2-monitoring-example
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
