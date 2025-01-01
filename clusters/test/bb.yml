@@ -6,9 +6,20 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10s
-  path: ./bb
+  path: ./manifests
   prune: true
   sourceRef:
     kind: GitRepository
     name: 2-demo-source-git-bb-app
   targetNamespace: 2-demo
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: 2-demo-source-git-bb-app
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: 2-demo
+  url: https://github.com/FrankBeu/bb-app-source
